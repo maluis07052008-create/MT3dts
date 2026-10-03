@@ -1,0 +1,34 @@
+[
+  {
+    "nome": "Vaso geométrico",
+    "categoria": "Casa e decoração",
+    "preco": 49.9,
+    "cor": "#E50000",
+    "descricao": "Vaso decorativo com facetas, impresso em PLA.",
+    "modelo": null
+  },
+  {
+    "nome": "Suporte de celular",
+    "categoria": "Escritório",
+    "preco": 29.9,
+    "cor": "#1A1A1A",
+    "descricao": "Suporte firme para mesa, com ângulo ajustável.",
+    "modelo": null
+  },
+  {
+    "nome": "Porta-canetas",
+    "categoria": "Escritório",
+    "preco": 34.9,
+    "cor": "#6B6B6B",
+    "descricao": "Organizador de mesa com cinco divisões.",
+    "modelo": null
+  },
+  {
+    "nome": "Chaveiro personalizado",
+    "categoria": "Presentes",
+    "preco": 14.9,
+    "cor": "#B80000",
+    "descricao": "Chaveiro com o nome ou desenho que você escolher.",
+    "modelo": null
+  }
+]

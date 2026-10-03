@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+  </script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio"><img src="logo.png" alt="MT3D" height="52"></a>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#personalizado">Sob encomenda</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#sobre">Sobre e contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="destaque">
+      <div class="coluna-midia">
+        <div class="hex">
+          <div class="viewer-wrap">
+            <div id="viewer" aria-label="Visualizador 3D do produto"></div>
+            <img id="foto" class="foto" alt="Foto do produto" hidden>
+            <p id="dica" class="dica">Arraste para girar, role para ampliar</p>
+          </div>
+        </div>
+        <div id="miniaturas" class="miniaturas"></div>
+      </div>
+      <div>
+        <h1 id="nome"></h1>
+        <p id="descricao"></p>
+        <div id="cores" class="cores"></div>
+        <p id="preco" class="preco"></p>
+        <a id="comprar" class="botao" href="#">Comprar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="secao" id="produtos">
+      <h2>Produtos</h2>
+      <div id="chips" class="chips"></div>
+      <div id="lista"></div>
+    </section>
+
+    <section class="secao escura" id="personalizado">
+      <div class="duas">
+        <div>
+          <h2>Imprimimos a sua ideia</h2>
+          <p>Tem um arquivo 3D ou só um desenho na cabeça? Conte o que você precisa e receba um orçamento pelo WhatsApp.</p>
+          <p class="nota">Se já tem o arquivo (.stl, .obj ou .3mf), envie na conversa depois que o WhatsApp abrir.</p>
+        </div>
+        <form id="pedido">
+          <label>Seu nome <input name="nome" required></label>
+          <label>O que você quer imprimir <textarea name="ideia" rows="3" required></textarea></label>
+          <label>Material
+            <select name="material">
+              <option>PLA</option><option>PETG</option><option>ABS</option><option>Resina</option><option>Ainda não sei</option>
+            </select>
+          </label>
+          <label>Tamanho aproximado <input name="tamanho" placeholder="Ex.: 10 x 5 x 3 cm"></label>
+          <label>Arquivo 3D (opcional) <input type="file" name="arquivo" accept=".stl,.obj,.3mf"></label>
+          <button class="botao" type="submit">Pedir orçamento</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao" id="galeria">
+      <h2>Trabalhos feitos</h2>
+      <div id="galeria-lista"></div>
+    </section>
+
+    <section class="secao" id="sobre">
+      <div class="duas">
+        <div>
+          <h2>Sobre a loja</h2>
+          <p>Escreva aqui, em duas ou três frases, quem faz as peças, há quanto tempo você imprime e o que torna o seu trabalho diferente.</p>
+        </div>
+        <div>
+          <h2>Contato</h2>
+          <ul class="contato">
+            <li><a id="c-whats" href="#">WhatsApp</a></li>
+            <li><a id="c-insta" href="#">Instagram</a></li>
+            <li><a id="c-email" href="#">E-mail</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
